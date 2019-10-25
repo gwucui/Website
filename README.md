@@ -1,2 +1,2 @@
-# Website
-Website for GWUCUI
+# newgwucuisite
+rebuilding the website for gwucui!

@@ -1,0 +1,309 @@
+/* H T M L   A N D   B O D Y */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-family:"Segoe UI",Arial,sans-serif;
+  margin: 0;
+  color:#004064;
+  background-color: white;
+  font-weight: 400;
+  text-align: justify;
+}
+
+/* H E A D E R */
+header {
+  z-index: 1;
+  height: 60;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+}
+nav ul {
+  margin: 0;
+  float: right;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline;
+  float: left;
+}
+#homelink {
+  float: left;
+  margin: 0;
+}
+.navlink {
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px 16px;
+  font-size: 16px;
+}
+.navlink:link, .navlink:visited {
+  background: transparent;
+  color:#004064;
+}
+.navlink:hover, .navlink:active {
+  background: #CCCCCC;
+  color:#000000;
+}
+#icon {
+  display: none;
+  float: right;
+  padding: 6px;
+  background-color: white;
+}
+
+/* H E A D E R   A N D   S I D E   B A R   S W I T C H */
+@media only screen and (max-width: 900px) {
+  #icon {
+    display: block;
+  }
+  #homelink {
+    display: none;
+  }
+  header nav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #icon {
+    display: none;
+  }
+  #homelink {
+    display: inline-block;
+  }
+  header nav {
+    display: inline-block;
+    float: right;
+  }
+  #sidebar {
+    display: none;
+  }
+}
+
+/* S I D E B A R */
+#sidebar {
+  z-index: 2;
+  height: 100%;
+  position: fixed;
+  margin: 0;
+  background-color: #004064;
+  display: none;
+}
+#sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.sidebarlink {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  padding-right: 50px;
+}
+.sidebarlink:link, .sidebarlink:visited {
+  background: transparent;
+  color: #FFFFFF;
+}
+.sidebarlink:hover, .sidebarlink:active {
+  background: #CCCCCC;
+  color: #000000;
+}
+
+/* H O M E */
+#home {
+  z-index: -1;
+  background-image: url("../imgs/background.png");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+}
+#home img {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#home .socialicons {
+  padding: 16px;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  z-index: 2;
+}
+#home .socialicons a i{
+  color: white;
+  z-index: 50;
+}
+#home .socialicons a i:hover {
+  color: red;
+}
+
+/* C O N T A I N E R S   A N D   T I T L E S */
+.container {
+  padding: 100px 32px;
+  font-size: 18px;
+  line-height: 1.8;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.title {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 12px;
+  font-weight: 350;
+}
+.subtitle {
+  text-align: center;
+  font-size: 20px;
+  padding: 12px;
+  font-weight: 350;
+}
+
+/* A B O U T */
+#about {
+  background-color: #FFFFFF;
+}
+
+/* S E R V I C E S */
+#services {
+  background-color: #EDEDED;
+}
+#servicescontainer {
+  text-align: justify;
+}
+.column {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  margin: 0;
+}
+.column i {
+  font-size: 35px;
+}
+
+/* G E T   I N V O L V E D */
+#getinvolved {
+  background-color: #FFFFFF;
+}
+
+/* T E A M */
+#team {
+  background-color: #EDEDED;
+  margin: 0;
+  text-align: center;
+  font-size: 0;
+}
+.cardcontainer {
+  width: 15%;
+  padding: 16px 0;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+}
+.card {
+  padding: 0;
+  width: 92%;
+  background: #FFFFFF;
+  text-align: left;
+  margin: 0;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,.2),0 2px 10px 0 rgba(0,0,0,0.2);
+  height: auto;
+  display: inline-block;
+}
+@media(min-width: 1700px){.cardcontainer{width: 19%;}}
+@media(max-width: 1700px){.cardcontainer{width: 24%;}}
+@media(max-width: 1000px){.cardcontainer{width: 32%;}}
+@media(max-width: 850px){.cardcontainer{width: 49%;}}
+@media(max-width: 600px){.cardcontainer{width: 100%;}}
+/* COME BACK HERE AND USE MATH TO FIGURE OUT WHEN IT SHOULD ACTUALLY CHANGE IN ORDER TO MAINTAIN A CERTAIN NORMAL SIZE OF CARDS... */
+.cardwords {
+  padding: 8px;
+  height: 250px;
+  display: table;
+  box-sizing: border-box;
+}
+.cardname {
+}
+.cardpositiontitle {
+  font-size: 15px;
+  opacity: .5;
+}
+.carddescription {
+  font-size: 15px;
+}
+
+/* D O N A T E */
+#donate {
+  background-color: #FFFFFF;
+}
+
+/* C O N T A C T */
+#contact {
+  background-color: #EDEDED;
+}
+
+/* A C H I E V E M E N T S */
+#achievements {
+  background-color: #FFFFFF;
+}
+
+/* F O O T E R */
+footer {
+  background-color: #004064;
+  margin: 0;
+  padding: 25px;
+}
+#footerbuttoncontainer {
+  text-align: center;
+  margin: 25px;
+}
+#footerbutton {
+  background-color: #FFFFFF;
+  color: #004064;
+  padding: 12px;
+  text-decoration: none;
+}
+#footerbutton:hover, #footerbutton:active {
+  background: #CCCCCC;
+  color: #000000;
+}
+#copyrightmessage {
+  text-align: center;
+  padding: 16px;
+  color: white;
+}
+footer .socialicons {
+  padding: 16px;
+  text-align: center;
+  font-size: 26px;
+  color: white;
+}
+footer .socialicons a {
+  color: white;
+}
+footer .socialicons a:hover {
+  opacity: .2;
+}
+
+/* O T H E R */
+.buttoncontainer {
+  text-align: center;
+  margin: 50px;
+}
+.button {
+  background-color: #004064;
+  color: #FFFFFF;
+  padding: 16px;
+  text-decoration: none;
+}
+.button:hover, .button:active {
+  background: #CCCCCC;
+  color: #000000;
+}
