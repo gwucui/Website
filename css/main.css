@@ -188,14 +188,19 @@ nav ul li {
   font-size: 35px;
 }
 
+/* D O N A T E */
+#donate {
+  background-color: #FFFFFF;
+}
+
 /* G E T   I N V O L V E D */
 #getinvolved {
-  background-color: #FFFFFF;
+  background-color: #EDEDED;
 }
 
 /* T E A M */
 #team {
-  background-color: #EDEDED;
+  background-color: #FFFFFF;
   margin: 0;
   text-align: center;
   font-size: 0;
@@ -237,11 +242,6 @@ nav ul li {
 }
 .carddescription {
   font-size: 15px;
-}
-
-/* D O N A T E */
-#donate {
-  background-color: #FFFFFF;
 }
 
 /* C O N T A C T */
