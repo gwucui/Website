@@ -173,11 +173,14 @@ nav ul li {
 }
 
 /* S E R V I C E S */
-#services {
+#products {
   background-color: #EDEDED;
 }
-#servicescontainer {
+#productscontainer {
   text-align: justify;
+  padding: 0 32px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .column {
   display: inline-block;
@@ -188,10 +191,14 @@ nav ul li {
 .column i {
   font-size: 35px;
 }
+@media(max-width: 600px){.column{width: 100%;}}
 
 /* D O N A T E */
 #donate {
   background-color: #FFFFFF;
+}
+#paypalform {
+  margin-top: 32px;
 }
 
 /* G E T   I N V O L V E D */
@@ -231,11 +238,9 @@ nav ul li {
 /* COME BACK HERE AND USE MATH TO FIGURE OUT WHEN IT SHOULD ACTUALLY CHANGE IN ORDER TO MAINTAIN A CERTAIN NORMAL SIZE OF CARDS... */
 .cardwords {
   padding: 8px;
-  height: 250px;
+  height: 300px;
   display: table;
   box-sizing: border-box;
-}
-.cardname {
 }
 .cardpositiontitle {
   font-size: 15px;
