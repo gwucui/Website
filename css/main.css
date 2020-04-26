@@ -260,6 +260,14 @@ nav ul li {
 .carddescription {
   font-size: 15px;
 }
+.hidden_description {
+  visibility: hidden;
+  font-size: 15px;
+}
+  
+.hov:hover .hidden_description{
+  visibility: visible;
+}
 
 /* C O N T A C T */
 #contact {
