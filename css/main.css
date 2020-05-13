@@ -327,3 +327,17 @@ footer .socialicons a:hover {
   background: #CCCCCC;
   color: #000000;
 }
+.altButton {
+  color: #FFFFFF;
+  border-style: solid;
+  border-color: #FFFFFF;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.altButton:hover, .altButton:active {
+  color: #FFFFFF;
+  background-color: #696969;
+  border-style: solid;
+  border-color: #FFFFFF;
+}

@@ -5,6 +5,48 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="js/script.js"></script>
   <script src="https://kit.fontawesome.com/063cf6042c.js" crossorigin="anonymous"></script>
+  <style>
+
+.tester {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #164061;
+}
+
+.tester:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
 </head>
 <body>
 
@@ -21,16 +63,44 @@
 
     <div class="cardcontainer">
       <div class="card">
-        <img src="imgs/team/advisory_board/lake2.jpg" style="width:100%;height:380px;object-fit:cover;">
+       	<!-- <img src="imgs/team/advisory_board/lake2.jpg" style="width:100%;height:380px;object-fit:cover;"> -->
+       	<div class="tester">
+		  <img src="imgs/team/advisory_board/lake2.jpg" style="width:100%;height:380px;object-fit:cover;" alt="Rodney Lake" class="image">
+		  <div class="overlay">
+			<div class="text">
+				Mr. Lake is a Teaching Instructor of Finance, the Deputy Chair of the
+				Department of Finance, the Director of the GW Investment Institute,
+				and a GW Faculty Member in Residence at the George Washington
+				University School of Business.<br><br>
+				<a class="altButton" href="advBios/Lake.pdf" >
+					Read More
+				</a>
+			</div>
+		  </div>
+		</div>
         <div class="cardwords" style="height:auto">
           <p class="carddescription">Rodney Lake</p>
         </div>
       </div>
     </div>
-
+    
     <div class="cardcontainer">
       <div class="card">
-        <img src="imgs/team/advisory_board/filson.jpg" style="width:100%;height:380px;object-fit:cover;">
+       	<!-- <img src="imgs/team/advisory_board/lake2.jpg" style="width:100%;height:380px;object-fit:cover;"> -->
+       	<div class="tester">
+		  <img src="imgs/team/advisory_board/filson.jpg" style="width:100%;height:380px;object-fit:cover;" alt="Chip Filson" class="image">
+		  <div class="overlay">
+			<div class="text">
+				Chip Filson is a co-founder of Callahan & Associates and currently serves 
+				as Chairman of the Board. A nationally recognized leader in 
+				the credit union industry, Chip is an astute author, frequent speaker, and 
+				consultant.<br><br>
+				<a class="altButton" href="advBios/Filson.pdf" >
+					Read More
+				</a>
+			</div>
+		  </div>
+		</div>
         <div class="cardwords" style="height:auto">
           <p class="carddescription">Chip Filson</p>
         </div>
@@ -39,15 +109,38 @@
 
     <div class="cardcontainer">
       <div class="card">
-        <img src="imgs/team/advisory_board/kennedy.jpg" style="width:100%;height:380px;object-fit:cover;">
+      <div class="tester">
+		  <img src="imgs/team/advisory_board/kennedy.jpg" style="width:100%;height:380px;object-fit:cover;" alt="William Kennedy" class="image">
+		  <div class="overlay">
+			<div class="text">
+				William (Bill) Kennedy is the new CFO of SecurityPlus.<br><br>
+				<a class="altButton" href="advBios/Kennedy.pdf" >
+					Read More
+				</a>
+			</div>
+		  </div>
+		</div>
         <div class="cardwords" style="height:auto">
           <p class="carddescription">William Kennedy</p>
         </div>
       </div>
     </div>
+    
     <div class="cardcontainer">
       <div class="card">
-        <img src="imgs/team/advisory_board/saenz.jpg" style="width:100%;height:380px;object-fit:cover;">
+        <div class="tester">
+		  <img src="imgs/team/advisory_board/saenz.jpg" style="width:100%;height:380px;object-fit:cover;" alt="Andres Saenz" class="image">
+		  <div class="overlay">
+			<div class="text">
+				Andres Saenz is an Associate in the Morgan Stanley Institutional Securities 
+				Group (ISG) Rotational Program since August 2019, currently sitting in Morgan 
+				Stanley&#39s Investor Relations team.<br><br>
+				<a class="altButton" href="advBios/Saenz.pdf" >
+					Read More
+				</a>
+			</div>
+		  </div>
+		</div>
         <div class="cardwords" style="height:auto">
           <p class="carddescription">Andres Saenz</p>
         </div>
@@ -56,7 +149,12 @@
 
     <div class="cardcontainer">
       <div class="card">
-        <img src="imgs/team/advisory_board/Cisco.png" style="width:100%;height:380px;object-fit:cover;">
+        <div class="tester">
+		   <img src="imgs/team/advisory_board/Cisco.png" style="width:100%;height:380px;object-fit:cover;" alt="Cisco Smith" class="image">
+		  <div class="overlay">
+			<div class="text">Cisco Smith</div>
+		  </div>
+		</div>
         <div class="cardwords" style="height:auto">
           <p class="carddescription">Cisco Smith</p>
         </div>
@@ -65,7 +163,19 @@
 	
 <div class="cardcontainer">
       <div class="card">
-        <img src="imgs/team/advisory_board/PJ.jpg" style="width:100%;height:380px;object-fit:cover;">
+        <div class="tester">
+		   <img src="imgs/team/advisory_board/PJ.jpg" style="width:100%;height:380px;object-fit:cover;" alt="PJ Tabit" class="image">
+		  <div class="overlay">
+			<div class="text">
+				PJ Tabit is a senior supervisory policy analyst at the Federal Reserve Board of 
+				Governors conducting financial and policy analysis of the student loan, auto loan, 
+				and credit scoring markets.<br><br>
+				<a class="altButton" href="advBios/Tabit.pdf" >
+					Read More
+				</a>
+			</div>
+		  </div>
+		</div>
         <div class="cardwords" style="height:auto">
           <p class="carddescription">PJ Tabit</p>
         </div>
@@ -75,7 +185,12 @@
 	
 <div class="cardcontainer">
       <div class="card">
-        <img src="imgs/team/advisory_board/Stephanie.jpg" style="width:100%;height:380px;object-fit:cover;">
+        <div class="tester">
+		   <img src="imgs/team/advisory_board/Stephanie.jpg" style="width:100%;height:380px;object-fit:cover;" alt="Stephanie Lyon" class="image">
+		  <div class="overlay">
+			<div class="text">Stephanie Lyon</div>
+		  </div>
+		</div>
         <div class="cardwords" style="height:auto">
           <p class="carddescription">Stephanie Lyon</p>
         </div>
@@ -84,7 +199,12 @@
 
 <div class="cardcontainer">
       <div class="card">
-        <img src="imgs/team/advisory_board/ChrisM.jpg" style="width:100%;height:380px;object-fit:cover;">
+        <div class="tester">
+		   <img src="imgs/team/advisory_board/ChrisM.jpg" style="width:100%;height:380px;object-fit:cover;" alt="Christopher Myers" class="image">
+		  <div class="overlay">
+			<div class="text">Christopher Myers</div>
+		  </div>
+		</div>
         <div class="cardwords" style="height:auto">
           <p class="carddescription">Christopher Myers</p>
         </div>
@@ -97,6 +217,8 @@
 </div>
 	
  </div>
+
+  
   <!-- GET INVOLVED -->
   <div class="container" id="getinvolved">
     <h1 class="title">GET INVOLVED</h1>
