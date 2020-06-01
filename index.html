@@ -1,396 +1,621 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GWU Credit Union Initiative</title>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="js/script.js"></script>
-  <script src="https://kit.fontawesome.com/063cf6042c.js" crossorigin="anonymous"></script>
-</head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Muli", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/general/homeBkgd.png");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
 <body>
 
-  <!-- HEADER WITH NAV -->
-  <header>
-    <div>
-      <div id="homelink"><a class="navlink" href="#home">HOME</a></div>
-      <nav>
-        <ul>
-          <li><a class="navlink" href="#about">ABOUT</a></li>
-          <li><a class="navlink" href="#products">PRODUCTS</a></li>
-          <li><a class="navlink" href="#financialliteracyresources">FINANCIAL LITERACY RESOURCES</a></li>
-          <li><a class="navlink" href="#donate">DONATE</a></li>
-          <li><a class="navlink" href="#getinvolved">GET INVOLVED</a></li>
-          <li><a class="navlink" href="#team">TEAM</a></li>
-          <li><a class="navlink" href="#contact">CONTACT</a></li>
-          <!--<li><a class="navlink" href="#achievements">ACHIEVEMENTS</a></li>-->
-        </ul>
-      </nav>
-      <div id="icon" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-      </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-custom w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button"><img src="img/general/logo.png" height="24px"></i></a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-text-white w3-hide-small">
+      <a href="#products" class="w3-bar-item w3-button"><i class="fa fa-bank"></i> PRODUCTS</a>
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> ABOUT</a>
+      <a href="#news" class="w3-bar-item w3-button"><i class="fa fa-newspaper-o"></i> NEWS</a>
+      <a href="#donate" class="w3-bar-item w3-button"><i class="fa fa-money"></i> DONATE</a>
+      <a href="#involved" class="w3-bar-item w3-button"><i class="fa fa-puzzle-piece"></i> GET INVOLVED</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-paper-plane"></i> CONTACT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#advisors" class="w3-bar-item w3-button"><i class="fa fa-th"></i> ADVISORS</a>
     </div>
-  </header>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-  <!-- SIDEBAR -->
-  <div id="sidebar">
-    <ul>
-      <li><a class="sidebarlink" href="javascript:void(0)" onclick="closeSidebar()">CLOSE X</a></li>
-      <li><a class="sidebarlink" href="#home">HOME</a></li>
-      <li><a class="sidebarlink" href="#about">ABOUT</a></li>
-      <li><a class="sidebarlink" href="#products">PRODUCTS</a></li>
-      <li><a class="sidebarlink" href="#financialliteracyresources">FINANCIAL LITERARY RESOURCES</a></li>
-      <li><a class="sidebarlink" href="#donate">DONATE</a></li>
-      <li><a class="sidebarlink" href="#getinvolved">GET INVOLVED</a></li>
-      <li><a class="sidebarlink" href="#team">TEAM</a></li>
-      <li><a class="sidebarlink" href="#contact">CONTACT</a></li>
-      <li><a class="sidebarlink" href="#achievements">ACHIEVEMENTS</a></li>
-    </ul>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
+</div>
 
-  <!-- HOME -->
-  <div id="home" >
-    <img src="imgs/logowhite.png">
-    <div class="socialicons">
-      <!--<a href="https://www.facebook.com/GWUCUI/"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/gwucui/"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/gwucui"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/company/gwucui/"><i class="fab fa-linkedin"></i></a>-->
-    </div>
-  </div>
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-custom w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#products" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-bank"></i> PRODUCTS</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-question-circle"></i> ABOUT</a>
+  <a href="#news" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-newspaper-o"></i> NEWS</a>
+  <a href="#donate" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-money"></i> DONATE</a>
+  <a href="#involved" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-puzzle-piece"></i> GET INVOLVED</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-paper-plane"></i> CONTACT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+  <a href="#advisors" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-th"></i> ADVISORS</a>
+</nav>
 
-    <!-- IN THE NEWS -->
-  <div class="container" id="press">
-    <h1 class="title">IN THE NEWS</h1>
-    <h2 class="subtitle">Read about GWUCUI in the news!</h2>
-    
-    <div class="buttoncontainer">
-      <a href="https://www.cutimes.com/2020/04/03/charter-in-reach-for-student-run-credit-union/">
-      <img src="imgs/CUTimes.jpg"  style="width:50%">
-      </a>
-    </div>
-    
-    <div class="buttoncontainer">
-      <a href="https://www.gwhatchet.com/2018/04/26/freshmen-plan-to-get-student-run-credit-union-off-the-ground-by-2020/">
-      <img src="imgs/hatchet1.jpg" style="width:50%">
-      </a>
-    </div>
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">GWUCUI</span>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">GWUCUI</span><br>
+    <span class="w3-xlarge">The George Washington University Credit Union Initiative</span>
+    <p><a href="#about" class="w3-button w3-white w3-text-custom w3-padding-large w3-large w3-margin-top w3-hover-opacity">Learn more</a></p>
+  </div> 
+  <div class="w3-display-bottomright w3-text-white w3-large" style="padding:24px 48px">
+    <a href="https://www.facebook.com/GWUCUI/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/gwucui/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/gwucui"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/company/gwucui/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   </div>
-  
-  <!-- ABOUT -->
-  <div class="container" id="about">
-    <h1 class="title">ABOUT</h1>
-    <h2 class="subtitle">Learn about our initiative</h2>
-    <p>
-      Our mission here at the GWUCUI is to strengthen the GW community by helping students and alumni bank cheaply, build credit, better manage their finances and develop valuable skill sets that they can bring to their careers. We seek to accomplish this goal by chartering a student-run Credit Union. A credit union is essentially a not-for-profit bank. This allows us to not only provide small loans at a low rate, but also provide more interest on members' deposits! In addition to banking services, we will offer a unique credit building program that builds credit score and knowledge of finances. All these services aim to empower the GW community while also providing job experience for GW students interested in any field.
-    </p>
-    <div class="buttoncontainer">
-      <!--<a class="button" href="executiveSummary.pdf" >
-        <i class="fa fa-mail-forward"></i>
-        READ OUR EXECUTIVE SUMMARY
-      </a>-->
+</header>
+
+<!-- Products Section -->
+<div class="w3-container" style="padding:128px 16px" id="products">
+  <h3 class="w3-center">PRODUCTS</h3>
+  <p class="w3-center w3-large">Our members will have access to:</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-third">
+      <i class="w3-text-custom fa fa-bank w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Share Accounts</p>
+      <p>Our share accounts are savings accounts that offer higher interest than any of our competitors,
+		partial membership of the credit union, and voting rights on credit union policies.</p>
+    </div>
+    <div class="w3-third">
+      <i class="w3-text-custom fa fa-credit-card w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Share Draft Accounts</p>
+      <p>Our share draft accounts are standard checking accounts, giving the student access to
+		on-campus ATMs and personalized debit cards.</p>
+    </div>
+    <div class="w3-third">
+      <i class="w3-text-custom fa fa-arrow-circle-o-up w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Credit Builder</p>
+      <p>Our credit building program is an effective, cheap, and risk-free way of building credit through
+		the use of a small secured loan.</p>
     </div>
   </div>
-
-  <!-- PRODUCTS -->
-  <div class="container" id="products">
-    <h1 class="title">PRODUCTS</h1>
-    <h2 class="subtitle">We will offer our members:</h2>
-    <div id="productscontainer">
-      <div class="column">
-        <i class="fa fa-bank"></i>
-        <p>Share Accounts</p>
-      </div>
-      <div class="column">
-        <i class="fa fa-money"></i>
-        <p>Textbook Loans</p>
-      </div>
-      <div class="column">
-        <i class="fa fa-dollar"></i>
-        <p>Student Org Micro-Loans</p>
-      </div>
-      <div class="column">
-        <i class="fa fa-arrow-circle-o-up"></i>
-        <p>Credit Builder</p>
-      </div>
-      <div class="column" style="width: 100%!important"></div>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+  	<div class="w3-third">
+      <i class="w3-text-custom fa fa-book w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Textbook Loans</p>
+      <p>Similar to internship loans, these loans can help students cover the cost of expensive
+		textbooks. Students with on-campus jobs who know that they will be able to cover the payment
+		but don’t currently have the means will benefit from this</p>
     </div>
-    <div class="buttoncontainer">
-      <a class="button" href="productDescriptions.pdf" >
-        <i class="fa fa-mail-forward"></i>
-        LEARN MORE ABOUT THESE PRODUCTS
-      </a>
+    <div class="w3-third">
+      <i class="w3-text-custom fa fa-graduation-cap w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Student Org Micro-loans</p>
+      <p>Student orgs can get short-term loans to cover the cost of their operations while they are
+		waiting for funding from the school.</p>
+    </div>
+    <div class="w3-third">
+      <i class="w3-text-custom fa fa-briefcase w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Internship Loans</p>
+      <p>After 3 rounds of surveying and over 1,000 students met with, we have identified the areas
+		where students are willing to take out small loans. Internship-related expenses that happen
+		before a student’s first pay day can be met with an internship loan.</p>
     </div>
   </div>
+</div>
 
-
-  <!-- FINANCIAL LITERACY -->
-  <div class="container" id="financialliteracyresources">
-    <h1 class="title">FINANCIAL LITERACY RESOURCES</h1>
-    <h2 class="subtitle">We're developing a curriculum for students</h2>
-    <p>
-      We aim to solve a critical problem that our peers face: a lack of financial literacy education and training to manage their personal finances. Fellow GW undergraduate and graduate students have told us they feel underprepared for the transition to financial independence after graduation. A lack of financial literacy follows into adulthood, affecting the ability to plan and sustainably spend. We have already hosted events and are now working with partners on campus to develop a curriculum around financial literacy. These resources will help students understand their personal finances and utilize our products.
-    </p> 
-  </div>
-
-  <!-- DONATE -->
-  <div class="container" id="donate">
-    <h1 class="title">DONATE</h1>
-    <h2 class="subtitle">Please consider supporting our initiative</h2>
-    <p>
-      Your assistance will help us get this credit union operational by helping us achieve our most critical objective: raising $80,000. Your donation is greatly appreciated. For donations greater than $2,000, or if you have any questions at all, please email us at <a href="mailto:info@gwucui.com">info@gwucui.com</a>, and an associate will be assigned to personally work with you.
-    </p>
-    <form id="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      <input type="hidden" name="cmd" value="_s-xclick" />
-      <input type="hidden" name="hosted_button_id" value="8F555C9JZZRAS" />
-      <input style="display: block; margin: 0 auto;" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-      <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-    </form>
-  </div>
-
-  <!-- GET INVOLVED -->
-  <div class="container" id="getinvolved">
-    <h1 class="title">GET INVOLVED</h1>
-    <h2 class="subtitle">Join our initiative</h2>
-    <p>
-      Join our initiative to be one of the credit union's founding members. Being totally student-run is a core feature of our initiative and soon-to-be credit union. We have open positions in our development, technology, communications, and operations teams, within which a large array of skills are currently needed. You will gain hands-on experience working in a grassroots, entrepreneurial organization. We take pride in our initiative and would love to have you on the team.
-    </p>
-    <div class="buttoncontainer">
-      <a class="button" href="https://app.joinhandshake.com/employers/326614?ref=topbar-search-result" >
-        <i class="fa fa-mail-forward"></i>
-        APPLY ON HANDSHAKE
-      </a>
+<!-- About Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="about">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Learn more about our initiative.</h3>
+      <p>Our mission here at the GWUCUI is to strengthen the GW community by helping students and alumni bank cheaply,
+       build credit, better manage their finances and develop valuable skill sets that they can bring to their careers. 
+       We seek to accomplish this goal by chartering a student-run Credit Union. A credit union is essentially a 
+       not-for-profit bank. This allows us to not only provide small loans at a low rate, but also provide more interest 
+       on members' deposits! In addition to banking services, we will offer a unique credit building program that builds 
+       credit score and knowledge of finances. All these services aim to empower the GW community while also providing job 
+       experience for GW students interested in any field.</p>
+      <p><a href="#team" class="w3-button w3-custom"><i class="fa fa-user"> </i> Meet Our Team</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="img/general/GW3.jpeg" alt="GW" width="700" height="394">
     </div>
   </div>
+</div>
 
-  <!-- TEAM -->
-  <div class="container" id="team">
+<!-- In the News -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64" id="news">
+  <h3 class="w3-center">In the News</h3>
+    <a href="https://www.cutimes.com/2020/04/03/charter-in-reach-for-student-run-credit-union/"><img class="w3-hover-opacity" src="img/general/CUT.png" height="50%" width="50%"></a><br><br>
+  	<a href="https://www.gwhatchet.com/2018/04/26/freshmen-plan-to-get-student-run-credit-union-off-the-ground-by-2020/"><img class="w3-hover-opacity" src="img/general/Hatchet.png" height="50%" width="50%"></a>
+</div>
 
-    <h1 class="title">TEAM</h1>
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
 
-    <h2 class="subtitle">Development Team</h2>
-
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Sahil.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Chief Executive Officer</p>
-          <p class="carddescription">Sahil Pankhaniya is a junior from Florida majoring in finance and statistics who founded the initiative in 2017.  He sets strategy, coordinates fundraising, and publicly represents the initiative.  He also manages the development team which oversees the NCUA charter and financial planning process for the proposed federal credit union.</p>
-        </div>
+<!-- Donate Section -->
+<div class="w3-container w3-light-grey w3-padding-64" id="donate">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Donate.</h3>
+      <p>Your assistance will help us get this credit union operational by achieving our most critical objective: raising $80,000. Your donation is greatly appreciated. For donations greater than $2,000, or if you have any questions at all, please email us at info@gwucui.com, and an associate will be assigned to personally work with you.</p>
+      <form id="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      	<input type="hidden" name="cmd" value="_s-xclick" />
+      	<input type="hidden" name="hosted_button_id" value="8F555C9JZZRAS" />
+      	<button class="w3-button w3-custom" type="submit">
+          <i class="fa fa-paypal"></i> Make a Donation
+        </button>
+      	<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+      </form>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-money w3-margin-right"></i>Help us reach our goal!</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:90%">$80,000</div>
       </div>
     </div>
+  </div>
+</div>
 
-<!--    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Colin.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Development Chair</p>
-          <p class="carddescription">Colin Brodie is a junior studying finance and economics. He joined the initiative's development team in 2017 during his freshman year. Most of his experience has been in regulatory compliance.</p>
-        </div>
-      </div>
-    </div> -->
+<!-- Get Involved Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="involved">
+  <h3>Get Involved</h3>
+  <p class="w3-large">There are many ways to support our initiative's goals.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Students</li>
+        <li class="w3-padding-16" style="height:300px">Join our initiative to be one of the credit union's founding members. Being totally student-run is a core feature of our initiative and soon-to-be credit union. We have open positions in our development, technology, communications, and operations teams, within which a large array of skills are currently needed. You will gain hands-on experience working in a grassroots, entrepreneurial organization. We take pride in our initiative and would love to have you on the team.</li>
+        <li class="w3-light-grey w3-padding-24">
+          <a class="w3-button w3-black w3-padding-large" href="https://app.joinhandshake.com/employers/326614?ref=topbar-search-result">Apply on Handshake</a>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-custom w3-xlarge w3-padding-48">Financial Literacy</li>
+        <li class="w3-padding-16" style="height:400px">We aim to solve a critical problem that our peers face: a lack of financial literacy education and training to manage their personal finances. Fellow GW undergraduate and graduate students have told us they feel underprepared for the transition to financial independence after graduation. A lack of financial literacy follows into adulthood, affecting the ability to plan and sustainably spend. We have already hosted events and are now working with partners on campus to develop a curriculum around financial literacy. These resources will help students understand their personal finances and utilize our products.</li>
+      	<li class="w3-light-grey w3-padding-32">We're developing a curriculum for students.</li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Professionals</li>
+        <li class="w3-padding-16" style="height:300px">Your assistance will help us get this credit union operational by May 1st, 2020. A strong advisory board will help us achieve our most critical objective: raising $40,000 by December, 2019. To join the advisory board, send an email to info@gwucui.com, and an associate will be assigned to personally work out details with you.</li>
+        <li class="w3-light-grey w3-padding-24">
+          <a class="w3-button w3-black w3-padding-large" href="mailto: info@gwucui.com">Email Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Vincent.jpg" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Development Chair</p>
-          <p class="carddescription">Vincent Premysler is a sophomore from Washington, DC. A finance major, he works on detailed financial projections, while learning about the financial structures that make up a credit union.</p>
-        </div>
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="w3-text-custom fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> info@gwucui.com</p>
+    <p><i class="w3-text-custom fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Foggy Bottom, D.C.</p>
+    <!-- Image of location/map -->
+    <img src="img/general/DC.png" class="w3-image" style="width:100%;margin-top:48px">
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">The Team</h3>
+  <p class="w3-center w3-large">Development Team</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Sahil.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sahil Pankhaniya is a junior from Florida majoring in finance and statistics who founded the initiative in 2017. He sets strategy, coordinates fundraising, and publicly represents the initiative. He also manages the development team which oversees the NCUA charter and financial planning process for the proposed federal credit union.">
+      <div class="w3-container">
+          <h3>Sahil Pankhaniya</h3>
+          <p class="w3-opacity">Chief Executive Officer</p>
       </div>
     </div>
-    
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Yigit.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Development Analyst</p>
-          <p class="carddescription">Yigit Yoruk is a Freshman from Istanbul, Turkey. Mr. Yoruk has joined GWUCUI in 2020 as a development analyst. He is majoring in Systems Engineering.</p>
-        </div>
-      </div>
-    </div>    
-
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/JacobH.jpg" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Development Analyst</p>
-          <p class="carddescription">Jacob Honig is a freshman from Florida majoring in Finance and Economics. He joined GWUCUI in 2020 as a development analyst. He assists the development team with preparing models and official documents.</p>
-        </div>
-      </div>
-    </div>
-    
-    <h2 class="subtitle">Technology Team</h2>
-
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Christian.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Chief Technology Officer</p>
-          <p class="carddescription">Christian Trummer is a junior from Pennsylvania studying Mechanical/Aerospace Engineering. Christian works with software vendors and oversees website development and IT operations.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Ander.jpg" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Technology Chair</p>
-          <p class="carddescription">Ander Tebbutt is a sophomore studying accounting and has been on the team for a little over a year. He helps with vendor management and assists the CTO in other duties.</p>
-        </div>
-      </div>
     </div>
     
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Giana.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Technology Analyst</p>
-          <p class="carddescription">Giana Fiore is a junior from Virginia studying Computer Science and Business Administration. Giana works on web development.</p>
-        </div>
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Vincent.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Vincent Premysler is a sophomore from Washington, DC. A finance major, he works on detailed financial projections, while learning about the financial structures that make up a credit union.">
+      <div class="w3-container">
+          <h3>Vincent Premysler</h3>
+          <p class="w3-opacity">Development Chair</p>
       </div>
+    </div>
     </div>
     
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Mike.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Technology Analyst</p>
-          <p class="carddescription">Michael Nair is a Freshman from Massachusetts majoring in Economics and Statistics, and minoring in Computer Science. He assists the CTO with vendor management, team systems training, and other duties.</p>
-        </div>
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Yigit.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Yigit Yoruk is a Freshman from Istanbul, Turkey. Mr. Yoruk has joined GWUCUI in 2020 as a development analyst. He is majoring in Systems Engineering.">
+      <div class="w3-container">
+          <h3>Yigit Yoruk</h3>
+          <p class="w3-opacity">Development Analyst</p>
       </div>
     </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/JacobH.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jacob Honig is a freshman from Florida majoring in Finance and Economics. He joined GWUCUI in 2020 as a development analyst. He assists the development team with preparing models and official documents.">
+      <div class="w3-container">
+          <h3>Jacob Honig</h3>
+          <p class="w3-opacity">Development Analyst</p>
+      </div>
+    </div>
+    </div>  
+</div>
 
-    <h2 class="subtitle">Operations Team</h2>
+<br><br><p class="w3-center w3-large">Technology Team</p>
+<div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/christian.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Christian Trummer is a junior from Pennsylvania studying Mechanical/Aerospace Engineering. Christian works with software vendors and oversees website development and IT operations.">
+      <div class="w3-container">
+          <h3>Christian Trummer</h3>
+          <p class="w3-opacity">Chief Technology Officer</p>
+      </div>
+    </div>
+    </div>
+    
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Ander.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Ander Tebbutt is a sophomore studying accounting and has been on the team for a little over a year. He helps with vendor management and assists the CTO in other duties.">
+      <div class="w3-container">
+          <h3>Ander Tebbutt</h3>
+          <p class="w3-opacity">Technology Chair</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Giana.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Giana Fiore is a junior from Virginia studying Computer Science and Business Administration. Giana works on web development.">
+      <div class="w3-container">
+          <h3>Giana Fiore</h3>
+          <p class="w3-opacity">Technology Analyst</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Mike.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Michael Nair is a Freshman from Massachusetts majoring in Economics and Statistics, and minoring in Computer Science. He assists the CTO with vendor management, team systems training, and other duties.">
+      <div class="w3-container">
+          <h3>Michael Nair</h3>
+          <p class="w3-opacity">Technology Analyst</p>
+      </div>
+    </div>
+    </div>  
+</div>
+
+<br><br><p class="w3-center w3-large">Operations Team</p>
+<div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Scott.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Scott is a junior from Pennsylvania and founding member. He is an accounting major with experience in financial accounting and internal audit. He is involved in policy formulation, fundraising, and market research.">
+      <div class="w3-container">
+          <h3>Scott</h3>
+          <p class="w3-opacity">Chief Operating Officer</p>
+      </div>
+    </div>
+    </div>
+    
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Kelly.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Kelly is a sophomore born in New York, raised in Fuzhou, China and Kentucky. She is double-majoring in International Affairs and Economics. Kelly manages internal operations as well as recruitment and outreach.">
+      <div class="w3-container">
+          <h3>Kelly</h3>
+          <p class="w3-opacity">Operations Chair</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Renan.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Renan Dennig is a first-year student from Albuquerque, New Mexico. He is pursuing a major in economics with an interest in political economy. Renan plans to attend law school after graduation.">
+      <div class="w3-container">
+          <h3>Renan Dennig </h3>
+          <p class="w3-opacity">Operations Analyst</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/PaulC.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Paul Cornelius is a sophomore from New York. A German native, he is majoring in International Business and minoring in International Affairs. Paul joined GWUCUI in 2020 as an operations analyst.">
+      <div class="w3-container">
+          <h3>Paul Cornelius</h3>
+          <p class="w3-opacity">Operations Analyst</p>
+      </div>
+    </div>
+    </div>  
+</div>
+
+<br><br><p class="w3-center w3-large">Communication Team</p>
+<div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Kelton.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Kelton Estabrook is a freshman from New Jersey studying Political Science and Business Administration. He works on marketing on the Communications Team.">
+      <div class="w3-container">
+          <h3>Kelton Estabrook</h3>
+          <p class="w3-opacity">Communications Chair</p>
+      </div>
+    </div>
+    </div>
+    
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/NickF.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Nicholas Frayter is a freshman from Connecticut majoring in Finance and International Business, and minoring in German. He creates content for Instagram, Facebook, and LinkedIn to market the credit union.">
+      <div class="w3-container">
+          <h3>Nicholas Frayter</h3>
+          <p class="w3-opacity">Communications Analyst</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/team/Olivia.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Olivia Jiang is a sophomore student from California. She is pursuing a Bachelor of Business Administration with concentrations of Finance and Marketing, with a minor in Communication. She advertises events and business development progress.">
+      <div class="w3-container">
+          <h3>Olivia Jiang</h3>
+          <p class="w3-opacity">Communications Analyst</p>
+      </div>
+    </div>
+    </div>
+    
+</div>
+
+</div>
+
+<!-- Advisory Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="advisors">
+  <h3 class="w3-center">Advisory Board</h3>
+  <p class="w3-center w3-large">Meet our advisors</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/adv/lake.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mr. Lake is a 
+      Teaching Instructor of Finance, the Deputy Chair of the Department of Finance, the Director of the GW Investment 
+      Institute, and a GW Faculty Member in Residence at the George Washington University School of Business. Mr. Lake teaches 
+      graduate and undergraduate investment courses, where students manage real capital. To date, the Assets Under Management 
+      (AUM) across the GW Investment Institute’s student funds are approximately $5.2 million.
+      As the deputy chair of the Department of Finance, Mr. Lake assist the chair of the Department of Finance with administrative 
+      tasks on classes and ways to enhance the student experience. Additionally, Mr. Lake is the director of the GW Investment 
+      Institute, where he raises capital for the GW student investment funds portfolio and manages employees of the institute 
+      on a daily basis. Mr. Lake has also served as a mentor-in-residence supported by the GW Office of Innovation and 
+      Entrepreneurship. Instructor Lake provides guidance, coaching, support and connections to students with a goal to enhance 
+      entrepreneurship at GW. Prior to Mr. Lake’s current appointment in the GWSB Department of Finance and the GW Investment 
+      Institute, Mr. Lake worked as a senior investment officer in the George Washington University Investment Office. The GW 
+      Investment Office was responsible for managing the university’s then $1.5 billion endowment fund. Prior to that, Mr. Lake 
+      was a senior financial analyst in the Executive Vice President and Treasurer’s Office at GW, where he served as an internal 
+      consultant for projects ranging from financial and optimization modeling to developing spin-out strategies and valuations 
+      for internal businesses. Prior to joining GW, he was a financial analyst in portfolio management at a mortgage banking 
+      subsidiary of California Federal Bank (now part of Citi). Mr. Lake graduated cum laude from West Virginia Wesleyan College 
+      with a Bachelor of Science degree in business. He received his MBA from the George Washington University.">
+      <div class="w3-container">
+          <h3>Rodney Lake</h3>
+          <p class="w3-opacity">Advisory Board Chairman</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/adv/filson.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Chip Filson is a 
+      co-founder of Callahan & Associates and currently serves as the company’s Chairman of the Board. A nationally recognized 
+      leader in the credit union industry, Chip is an astute author, frequent speaker, and consultant for the credit union 
+      movement. He has more than 40 years of experience in government, financial institutions, and business. Chip’s breadth of 
+      experience makes him an authority on a wide range of topics, including analysis of credit union trends, credit union 
+      public and market-facing opportunities, and strategies for enhancing member value. Chip’s contributions to the 
+      cooperative movement have been demonstrated with his analysis and advocacy for the corporate credit union system, NCUA’s 
+      Corporate Stabilization role, and the need for regulatory reform.
+      
+      He is an avid believer that cooperative principles are a key to credit union success and founded Coops4Change 
+      (www.coops4changes.org) to reestablish cooperative principles as the foundation for the credit union regulatory system. 
+      Chip has held concurrent positions at the National Credit Union Administration (NCUA) as president of the Central Liquidity 
+      Facility (CLF) and Director of the Office of Programs, which includes the NCUSIF and the examination process.
+      
+      Chip holds a magna cum laude undergraduate degree in government from Harvard University. After being awarded a Rhodes 
+      Scholarship, he earned a master’s degree in politics, philosophy, and economics from Oxford University in England. He also 
+      holds an MBA in management from Northwestern University’s Kellogg School in Chicago.">
+      <div class="w3-container">
+          <h3>Chip Filson</h3>
+          <p class="w3-opacity">Advisory Board</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/adv/kennedy.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="William (Bill) 
+      Kennedy is the new CFO of SecurityPlus.   He started his credit union career as CFO at Department of Justice FCU, after 
+      working as Senior Accountant at the FSLIC Receivership Division under Mr. William Linane Sr. who encouraged him to bring 
+      his talents to credit unions when the FSLIC Division was moving to Atlanta. At the time Mr. Linane was also HUDFCU 
+      Chairman and a Board member at Cap Corp.  
+      
+      Bill’s credit union career since then has mainly been in credit union turnaround situations. Because of his strong 
+      leadership, turnaround skills and his overall extensive involvement in the community he was honored and recognized with 
+      the NAFCU Professional CEO of the Year and the Judith A. Burgin Memorial Professional of the Year Award’s and the 2019 
+      Credit Union Rock Star Award.  
+      
+      Nationally and locally, he is heavily involved in giving back to the credit union movement and community at large.  He is 
+      the founder and for six years, until 2019, directed the quarterly Mid Atlantic Finance and Accounting events held at the 
+      Association.  Other past experience includes being elected by CFO peers to two separate terms on the CUNA CFO Executive 
+      Board; ten years of full and part time College Business Faculty, NJ CU Foundation Board, Police Athletic League Board 
+      member/Treasurer, Argyle Country Club Board member/Treasurer, Fellowship of Christian Athletes (FCA) Camp and Huddle 
+      leader, Board member of Maryland Credit Union League, and Board member/ Treasurer of National Capital Central FCU, CUNA 
+      Mutual CEO Select Group, a MACUMA Board member and an advisor to the George Washington Credit Union startup initiative.   
+      
+      Bill is passionate about bringing recent college graduates and current college students into the movement. As business 
+      faculty it disappointed him that students did not have a credit union career on their radar. He set about to change that 
+      by offering internships whenever possible , and to date he has mentored over 80 college interns, many who entered and 
+      remain involved in the movement.  
+      
+      Bill a CCUE and NCCO, holds an MBA through the Executive Program at Loyola College, additional Masters Level Accounting 
+      courses from Liberty University, and a Bachelor of Science in Business and Accounting from the University of Maryland, 
+      College Park.
+      
+      Bill and his wife Ann live in Frederick, Maryland. During his free time Bill enjoys golf with his adult children, serving 
+      the FCA, and is itching to get golf clubs in the hands of his five grandchildren.">
+      <div class="w3-container">
+          <h3>William Kennedy</h3>
+          <p class="w3-opacity">Advisory Board</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/adv/saenz.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Andres Saenz is an Associate in the Morgan Stanley Institutional Securities Group (ISG) Rotational Program since August 2019, currently sitting in Morgan Stanley’s Investor Relations team.
+
+	Prior to becoming an Associate in the ISG Rotational Program, Saenz spent three years in Investment Banking focused on Financial Institutions, advising clients and governments globally on a broad range of issues including mergers and acquisitions, restructurings and capital raising.
+
+	After graduating from The George Washington University in 2016, Saenz joined Morgan Stanley and served as an Analyst and an Associate in the Financial Institutions Group in both New York City and London.
+
+	Saenz holds a Bachelor of Business Administration with a concentration in Finance and International Business from The George Washington University.
+	">
+      <div class="w3-container">
+          <h3>Andres Saenz</h3>
+          <p class="w3-opacity">Advisory Board</p>
+      </div>
+    </div>
+    </div>  
+</div>
+
+<div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/adv/Cisco.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Cisco has lead significant initiatives and strategies throughout his career, in particular the CU “College Strategy,” which he authored and successfully implemented at both BECU and GTE, engaging the largest Universities and Colleges in Western WA and Tampa Bay, respectively.">
+      <div class="w3-container">
+          <h3>Cisco Smith</h3>
+          <p class="w3-opacity">Advisory Board</p>
+      </div>
+    </div>
+    </div>
+    
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/adv/pj.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="PJ Tabit is a senior supervisory policy analyst at the Federal Reserve Board of Governors
+	conducting financial and policy analysis of the student loan, auto loan, and credit scoring
+	markets. 
+
+	He has previously held positions at the Congressional Research Reserve and the U.S.
+	House of Representatives. He is also a co-founder and current chair of the board of directors of
+	the Wiki Education Foundation, a San Francisco-based non-profit, and co-organizer of
+	SoundScene, one of the country’s largest audio art festivals. 
+
+	He holds a bachelor’s degree from the University of Scranton and master’s degrees from the George Washington University and Northwestern University.
+	.">
+      <div class="w3-container">
+          <h3>PJ Tabit</h3>
+          <p class="w3-opacity">Advisory Board</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/adv/stephanie.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Ms. Lyon directs Ncontracts’ compliance program, which includes product development and content. Prior to joining Ncontracts, she was a senior compliance counsel at NAFCU Ms. Lyon received her J.D. at the George Washington University.">
+      <div class="w3-container">
+          <h3>Stephanie Lyon</h3>
+          <p class="w3-opacity">Advisory Board</p>
+      </div>
+    </div>
+    </div>
+    
+    <div class="w3-col l3 m6">
+    <div class="w3-card">
+      <img src="img/adv/ChrisM.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Christopher Myers is a Mortgage Strategist at Navy Federal Credit Union headquartered in Northern Virginia. He graduated with his BA from the University of Virginia and his MBA from George Washington University.">
+      <div class="w3-container">
+          <h3>Christopher Myers</h3>
+          <p class="w3-opacity">Advisory Board</p>
+      </div>
+    </div>
+    </div>  
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-custom w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey w3-text-custom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/GWUCUI/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/gwucui/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://twitter.com/gwucui"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/company/gwucui/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+  </div>
+  <p>© 2020 by The George Washington University Credit Union Initiative</p>
+</footer>
  
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Scott.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Chief Operating Officer</p>
-          <p class="carddescription">Scott is a junior from Pennsylvania and founding member. He is an accounting major with experience in financial accounting and internal audit. He is involved in policy formulation, fundraising, and market research.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Kelly.jpg" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Operations Chair</p>
-          <p class="carddescription">Kelly is a sophomore born in New York, raised in Fuzhou, China and Kentucky. She is double-majoring in International Affairs and Economics. Kelly manages internal operations as well as recruitment and outreach.</p>
-        </div>
-      </div>
-    </div>
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Renan.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Operations Analyst</p>
-          <p class="carddescription">Renan Dennig is a first-year student from Albuquerque, New Mexico.  He is pursuing a major in economics with an interest in political economy.  Renan plans to attend law school after graduation.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/PaulC.jpg" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Operations Analyst</p>
-          <p class="carddescription">Paul Cornelius is a sophomore from New York. A German native, he is majoring in International Business and minoring in International Affairs. Paul joined GWUCUI in 2020 as an operations analyst.</p>
-        </div>
-      </div>
-    </div>    
-    
-    <h2 class="subtitle">Communications Team</h2>
 
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Kelton.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Communications Chair</p>
-          <p class="carddescription">Kelton Estabrook is a freshman from New Jersey studying Political Science and Business Administration. He works on marketing on the Communications Team.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/NickF.JPG" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Communications Analyst</p>
-          <p class="carddescription">Nicholas Frayter is a freshman from Connecticut majoring in Finance and International Business, and minoring in German. He creates content for Instagram, Facebook, and LinkedIn to market the credit union.</p>
-        </div>
-      </div>
-    </div>
-    
-     <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Olivia.JPG" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Communications Analyst</p>
-          <p class="carddescription">Olivia Jiang is a sophomore student from California. She is pursuing a Bachelor of Business Administration with concentrations of Finance and Marketing, with a minor in Communication. She advertises events and business development progress.</p>
-        </div>
-      </div>
-    </div>
-    
-    <h2 class="subtitle" id="advisory_board">Advisory Board</h2>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
 
-     <div class="cardcontainer">
-      <div class="card">
-        <img src="imgs/team/Rodney.png" style="width:100%">
-        <div class="cardwords">
-          <p class="cardpositiontitle">Advisory Board Chairman</p>
-          <p class="carddescription">Professor Lake is a Teaching Instructor of Finance, the Deputy Chair of the Department of Finance, the Director of the GW Investment Institute, and a GW Faculty Member in Residence at the George Washington University School of Business.</p>
-        </div>
-      </div>
-    </div>
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
 
-    <div class="buttoncontainer">
-      <a class="button" href="advisory_board.html">
-        <i class="fa fa-mail-forward"></i>
-        MEET THE REST OF OUR ADVISORY BOARD
-      </a>
-    </div>
-
-  </div>
-
-  <!-- CONTACT -->
-  <div class="container" id="contact">
-
-    <h1 class="title">CONTACT</h1>
-
-    <h2 class="subtitle">Let's get in touch. Send us a message:</h2>
-
-    <div class="buttoncontainer">
-      <a class="button" href="mailto: info@gwucui.com">
-        <i class="fa fa-mail-forward"></i>
-        info@gwucui.com
-      </a>
-    </div>
-
-  </div>
-
-  <!-- ACHIEVEMENTS 
-  <div class="container" id="achievements">
-    <h1 class="title">ACHIEVEMENTS</h1>
-  </div>
-  -->
-
-  <!-- FOOTER -->
-  <footer>
-    <div id="footerbuttoncontainer">
-      <a id="footerbutton" href="#home">To the top</a>
-    </div>
-    <div class="socialicons">
-      <a href="https://www.facebook.com/GWUCUI/"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/gwucui/"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/gwucui"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/company/gwucui/"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div id="copyrightmessage">© 2019 by The George Washington University Credit Union Initiative</div>
-    <div id= ""></div>
-  </footer>
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
 
 </body>
 </html>
+
