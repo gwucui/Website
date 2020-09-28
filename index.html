@@ -58,6 +58,7 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 fbq('track', 'PageView');
 
 	fbq('track', 'Donate');
+	fbq('track', 'GoFundMe');
 	
 </script>
 <noscript>
@@ -234,25 +235,28 @@ src="https://www.facebook.com/tr?id=4447993505241699&ev=PageView
 <!-- Donate Section -->
 <div class="w3-container w3-custom w3-padding-64" id="donate">
   <div class="w3-row-padding">
-    <div class="w3-col m6">
       <h3>Donate</h3>
       <p>Your assistance will help us get this credit union operational. Your donation is greatly appreciated. For donations greater than $2,000, or if you have any questions at all, please email us at info@gwucui.com, and an associate will be assigned to personally work with you.</p><br>
-      <p><i class="fa fa-money w3-margin-right"></i>$90,000 raised</p>
       <div class="w3-light-grey">
         <div class="w3-container w3-blue w3-text-blue w3-center" style="width:70%">%</div>
-      </div><br>
-      <form id="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-      	<input type="hidden" name="cmd" value="_s-xclick" />
-      	<input type="hidden" name="hosted_button_id" value="8F555C9JZZRAS" />
-      	<button class="w3-button w3-white w3-text-custom" type="submit">
-          <i class="fa fa-paypal"></i> Make a Donation
-        </button>
-      	<img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
-      </form>
-    </div><br>
-    <div class="w3-col m6">
-    	<div class="gfm-embed" data-url="https://www.gofundme.com/f/help-found-a-digital-student-run-credit-union/widget/medium/"></div><script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-    </div>
+      </div>
+      <p><i class="fa fa-money w3-margin-right"></i>$90,000 raised</p><br>
+      <div class="w3-row">
+     	 <div class="w3-half w3-center">
+		  <form id="paypalform" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<input type="hidden" name="cmd" value="_s-xclick" />
+			<input type="hidden" name="hosted_button_id" value="8F555C9JZZRAS" />
+			<button class="w3-button w3-white w3-text-custom" type="submit" style="width:50%">
+			  <i class="fa fa-paypal"></i> PayPal
+			</button>
+		  </form><br>
+		  </div>
+		  <div class="w3-half w3-center">
+		  <button class="w3-button w3-white w3-text-custom" id="GoFundMe" style="width:50%" onclick="location.href='https://gf.me/u/ywps9i';">
+			  <i class="fa fa-money"></i> GoFundMe
+		  </button>
+		  </div>
+	</div>
   </div>
 </div>
 
@@ -385,7 +389,7 @@ src="https://www.facebook.com/tr?id=4447993505241699&ev=PageView
       <img src="img/team/PaulC.jpg" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Paul Cornelius is a sophomore from New York. A German native, he is majoring in International Business and minoring in International Affairs. Paul joined GWUCUI in 2020 as an Analyst.">
       <div class="w3-container">
           <h3>Paul Cornelius</h3>
-          <p class="w3-opacity">Analyst</p>
+          <p class="w3-opacity">Project Manager</p>
       </div>
     </div>
     </div> 
@@ -416,11 +420,11 @@ src="https://www.facebook.com/tr?id=4447993505241699&ev=PageView
     </div>
     </div>
 	
-    <div class="w3-col l3 m6">
+	<div class="w3-col l3 m6">
     <div class="w3-card">
-      <img src="img/team/eleni.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Eleni Psaltis is a Junior from Tampa, Florida majoring in Economics and Organizational Sciences. She joined the Operations Team as an analyst in July, 2020.">
+      <img src="img/team/riya.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Riya Parikh is a freshman in the GWSB majoring in Finance. She joined the GWUCUI team as an analyst in 2020.">
       <div class="w3-container">
-          <h3>Eleni Psaltis</h3>
+          <h3>Riya Parikh</h3>
           <p class="w3-opacity">Analyst</p>
       </div>
     </div>
@@ -525,16 +529,6 @@ src="https://www.facebook.com/tr?id=4447993505241699&ev=PageView
 </div>
 
 <div class="w3-row-padding" style="margin-top:64px">    
-
-    <div class="w3-col l3 m6">
-    <div class="w3-card">
-      <img src="img/team/riya.png" style="width:100%;" onclick="onClick(this)" class="w3-hover-opacity" alt="Riya Parikh is a freshman in the GWSB majoring in Finance. She joined the GWUCUI team as an analyst in 2020.">
-      <div class="w3-container">
-          <h3>Riya Parikh</h3>
-          <p class="w3-opacity">Analyst</p>
-      </div>
-    </div>
-    </div>
     
     <div class="w3-col l3 m6">
     <div class="w3-card">
